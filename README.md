@@ -50,23 +50,22 @@ pytest -q
 
 ## Visual Storytelling
 
-### Churn by Plan Type
+<table>
+  <tr>
+    <td align="center"><strong>Churn by Plan Type</strong><br><img src="results/figures/01_churn_by_plan.png" alt="Churn by plan type" width="420" /></td>
+    <td align="center"><strong>ARPU by Region</strong><br><img src="results/figures/02_arpu_by_region.png" alt="ARPU by region" width="420" /></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Risk Segmentation</strong><br><img src="results/figures/03_risk_band_churn.png" alt="Risk segmentation" width="420" /></td>
+    <td align="center"><strong>Portfolio Summary</strong><br><img src="https://raw.githubusercontent.com/Ankit-Sharma-17/Data-Analyst-Project/main/results/figures/01_churn_by_plan.png" alt="Portfolio summary" width="420" /></td>
+  </tr>
+</table>
 
-[Churn by plan type](results/figures/01_churn_by_plan.png)
-
-![Churn by plan type](results/figures/01_churn_by_plan.png)
-
-### ARPU by Region
-
-[ARPU by region](results/figures/02_arpu_by_region.png)
-
-![ARPU by region](results/figures/02_arpu_by_region.png)
-
-### Risk Segmentation
-
-[Risk segmentation](results/figures/03_risk_band_churn.png)
-
-![Risk segmentation](results/figures/03_risk_band_churn.png)
+<p align="center">
+  <a href="results/figures/01_churn_by_plan.png">Churn by plan type</a> |
+  <a href="results/figures/02_arpu_by_region.png">ARPU by region</a> |
+  <a href="results/figures/03_risk_band_churn.png">Risk segmentation</a>
+</p>
 
 ## Business Findings
 
