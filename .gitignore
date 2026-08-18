@@ -12,11 +12,12 @@ env/
 .ipynb_checkpoints/
 
 # Local data artifacts
-data/raw/*.csv
-data/processed/*.csv
+# Keep the portfolio data and chart outputs in the repo so GitHub renders them
+# data/raw/*.csv
+# data/processed/*.csv
+# results/figures/*.png
+# results/figures/*.html
 data/raw/kaggle_temp/
-results/figures/*.png
-results/figures/*.html
 
 # OS / Editor
 .DS_Store
