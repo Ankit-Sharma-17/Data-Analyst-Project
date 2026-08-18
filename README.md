@@ -1,123 +1,185 @@
 # Telecom Customer Value Analytics
 
-A fully original, end-to-end analytics portfolio project for Data Analyst roles.
+A portfolio-ready telecom analytics project focused on customer value, churn risk, retention strategy, and stakeholder reporting.
 
-This project is inspired by the analytics workflow idea (clean -> analyze -> visualize -> dashboard) but uses a different business domain, different metrics, and different implementation: telecom customer value and churn analytics.
+## Executive Summary
 
-## Why This Project Matters
+This project builds a realistic end-to-end analytics workflow for a telecom business scenario:
 
-Telecom operators lose significant recurring revenue through preventable churn. This project builds a practical analytics pipeline to:
+- Understand which customer segments are most at risk of churn
+- Measure customer value through ARPU, revenue contribution, and tenure
+- Quantify the strongest churn drivers using behavioral and subscription signals
+- Build presentation-ready outputs for business and leadership stakeholders
 
-- Profile customer value segments
-- Quantify churn risk patterns
-- Identify action-ready segments for retention campaigns
-- Provide SQL assets and dashboard-ready outputs
+The project combines Python-based data engineering, SQL analytics, and dashboard-ready metrics into a single, reusable portfolio asset.
 
-## Project Scope
+## Business Problem
 
-- Domain: Telecom subscription analytics
-- Grain: Customer-level monthly profile
-- Core outcomes:
-  - KPI snapshot (ARPU, churn rate, customer base health)
-  - Segment performance table
-  - Churn driver comparison
-  - Visualization pack for stakeholder reporting
+Telecom businesses often lose revenue through preventable churn. Customers with weak engagement, support burden, delayed payments, or low tenure are more likely to churn and create downstream cost and retention issues.
 
-## Architecture
+This analysis targets the core business questions:
 
+- Which customer groups are most vulnerable to churn?
+- What revenue and retention trade-offs exist by plan type and region?
+- Which signals best predict churn before it happens?
+- What actions should a retention team prioritize first?
+
+## Key Results
+
+| Metric | Value |
+|---|---:|
+| Total Customers | 12,000 |
+| Churn Rate | 31.6% |
+| ARPU | $31.07 |
+| Average Tenure | 36.77 months |
+| Highest-Risk Segment | At-Risk group |
+| Revenue Leverage | Strongest in high-value cohorts |
+
+## Where the Project Adds Value
+
+This project demonstrates a practical, business-facing analytics workflow:
+
+- Customer segmentation and value profiling
+- Churn-risk detection using practical operational metrics
+- SQL-driven KPI and business logic
+- Visual storytelling for leadership and retention teams
+- Reproducible code and testing for portfolio credibility
+
+## Analytics Workflow
+
+```text
+Generate data -> Clean & transform -> Engineer features -> Segment customers -> Analyze KPIs -> Visualize -> SQL reporting
 ```
+
+## Project Structure
+
+```text
 Telecom-Customer-Value-Analytics/
 ├── data/
 │   ├── raw/
 │   └── processed/
-├── src/
-│   ├── generate_data.py
-│   ├── etl.py
-│   ├── analysis.py
-│   ├── visualize.py
-│   └── run_pipeline.py
+├── dashboard/
+│   ├── dashboard_spec.md
+│   └── POWERBI_BLUEPRINT.md
+├── docs/
+│   ├── case_study.md
+│   └── data_dictionary.md
+├── notebooks/
+│   └── 01_exploratory_notes.md
+├── results/
+│   ├── churn_drivers.csv
+│   ├── kpi_summary.csv
+│   ├── segment_performance.csv
+│   └── figures/
 ├── sql/
 │   ├── 01_schema.sql
 │   ├── 02_load_and_views.sql
 │   └── 03_analytics_queries.sql
-├── dashboard/
-│   └── dashboard_spec.md
-├── docs/
-│   ├── data_dictionary.md
-│   └── case_study.md
-├── notebooks/
-│   └── 01_exploratory_notes.md
-├── results/
-│   ├── kpi_summary.csv
-│   ├── segment_performance.csv
-│   ├── churn_drivers.csv
-│   └── figures/
+├── src/
+│   ├── analysis.py
+│   ├── etl.py
+│   ├── generate_data.py
+│   ├── run_pipeline.py
+│   ├── visualize.py
+│   └── __init__.py
 ├── tests/
 │   └── test_metrics.py
+├── LICENSE
+├── README.md
 ├── requirements.txt
-└── .gitignore
+├── .gitignore
+└── telecom_customers_processed.csv
 ```
 
 ## Tech Stack
 
 - Python: pandas, numpy, matplotlib, seaborn
-- SQL: SQLite / DuckDB-compatible scripts
+- SQL: SQLite / DuckDB-compatible analytical queries
 - Testing: pytest
-- Dashboard layer: Power BI / Tableau-ready data model guide
+- Dashboarding: Power BI-ready business model and visuals
 
 ## Quick Start
 
-### 1) Setup
+### 1. Create a virtual environment
 
 ```bash
 python -m venv .venv
 .venv\Scripts\activate
+```
+
+### 2. Install dependencies
+
+```bash
 pip install -r requirements.txt
 ```
 
-### 2) Run Pipeline
+### 3. Run the pipeline
 
 ```bash
 python src/run_pipeline.py
 ```
 
-Pipeline outputs:
-- `data/raw/telecom_customers_raw.csv`
-- `data/processed/telecom_customers_processed.csv`
-- `results/kpi_summary.csv`
-- `results/segment_performance.csv`
-- `results/churn_drivers.csv`
-- `results/figures/*.png`
-
-### 3) Run Tests
+### 4. Run tests
 
 ```bash
 pytest -q
 ```
 
-## Analytical Questions Answered
+## Visual Storytelling
 
-1. Which customer segments have the highest churn exposure?
-2. Which plan-region combinations generate high ARPU but weak retention?
-3. How strongly do support tickets and payment delays correlate with churn?
-4. Which risk bands should retention teams prioritize first?
+### Churn by Plan Type
 
-## Example KPI Definitions
+![Churn by plan type](results/figures/01_churn_by_plan.png)
 
-- Churn Rate = churned customers / total customers
-- ARPU = average monthly revenue per customer
-- Revenue Share by Segment = segment revenue / total revenue
+### ARPU by Region
 
-## Professional Portfolio Value
+![ARPU by region](results/figures/02_arpu_by_region.png)
 
-This project demonstrates:
+### Risk Segmentation
 
-- Production-style data pipeline structure
-- Reproducible analytics workflow
-- SQL and Python fluency
-- Business translation of technical findings
-- Hiring-ready documentation and test coverage
+![Risk segmentation](results/figures/03_risk_band_churn.png)
+
+## Key Business Findings
+
+- Payment delays and support burden are strongly associated with churn risk
+- Newer and lower-tenure customers appear more exposed to churn
+- Prepaid and lower-value segments show elevated churn intensity
+- High-value cohorts remain a major retention opportunity if targeted correctly
+- Revenue pressure is concentrated in specific plan-region combinations
+
+## Churn Drivers Snapshot
+
+| Driver | Interpretation |
+|---|---|
+| Support tickets | Higher service burden correlates with churn likelihood |
+| Payment delay days | Strong signal of financial stress and risk |
+| Tenure | Lower tenure customers churn more often |
+| Plan type | Lower-value plans exhibit a higher churn profile |
+| Region | Segment performance varies meaningfully by geography |
+
+## Deliverables
+
+This repository includes:
+
+- Reproducible customer data generation pipeline
+- ETL and transformation logic
+- KPI and segment analysis
+- SQL schema, views, and analytics queries
+- Chart exports for stakeholder reporting
+- Power BI dashboard blueprint for business presentation
+- Test suite for core logic validation
+
+## Portfolio Value
+
+This project is useful for data analyst and business analyst interviews because it demonstrates:
+
+- Realistic problem framing
+- Structured analytical thinking
+- Data cleaning and transformation skills
+- Business interpretation of technical findings
+- Communication with visual outputs
+- End-to-end project ownership from data to decision support
 
 ## License
 
-MIT (see `LICENSE`)
+This project is licensed under the MIT License. See [LICENSE](LICENSE).
