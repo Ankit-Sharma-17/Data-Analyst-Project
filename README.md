@@ -5,6 +5,10 @@
 </p>
 
 <p align="center">
+  <strong>Data Analyst Portfolio Project</strong> | <strong>Business Analyst Case Study</strong> | <strong>SQL Analyst Workflow</strong>
+</p>
+
+<p align="center">
   <a href="results/kpi_summary.csv"><img alt="KPI Output" src="https://img.shields.io/badge/KPI%20Output-CSV-1f6feb"></a>
   <a href="sql/03_analytics_queries.sql"><img alt="SQL Layer" src="https://img.shields.io/badge/SQL-Analytics%20Queries-0e8a16"></a>
   <a href="tests/test_metrics.py"><img alt="Tests" src="https://img.shields.io/badge/Tested-pytest-6f42c1"></a>
@@ -80,6 +84,8 @@ pytest -q
 ## Portfolio Relevance
 
 This project demonstrates end-to-end analyst capability across data preparation, KPI design, business framing, SQL reporting, and stakeholder-facing storytelling.
+
+Role keywords: Data Analyst, Business Analyst, SQL Analyst, Product Analytics, Churn Analysis, Customer Segmentation, Retention Analytics.
 
 ## License
 
