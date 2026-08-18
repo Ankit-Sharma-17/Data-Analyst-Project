@@ -1,0 +1,5 @@
+metric,value
+total_customers,12000.0
+churn_rate,0.3159
+arpu,31.07
+avg_tenure_months,36.77

@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Local data artifacts
+data/raw/*.csv
+data/processed/*.csv
+data/raw/kaggle_temp/
+results/figures/*.png
+results/figures/*.html
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Kaggle
+~/.kaggle/
+kaggle.json
+
+# IDE
+*.sublime-project
+*.sublime-workspace
